@@ -1,0 +1,22 @@
+.mainLayout {
+  width: calc(100vw - #{$sidBarWidth});
+  background-color: $backgroundColor2;
+}
+
+@media only screen and (max-width: 1280px) { 
+  .mainLayout {
+    width: calc(100vw - #{$sidBarWidth-desktop});
+  }
+}
+
+@media only screen and (max-width: 768px) { 
+  .mainLayout {
+    width: calc(100vw - #{$sidBarWidth-tab});
+  }
+}
+
+@media only screen and (max-width: 480px) { 
+  .mainLayout {
+    width: calc(100vw - #{$sidBarWidth-mobile});
+  }
+}

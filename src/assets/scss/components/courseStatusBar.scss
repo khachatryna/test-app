@@ -1,0 +1,64 @@
+.coursesStatusBar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 99px 60px 99px;
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: fit-content;
+    list-style: none;
+    cursor: pointer;
+    &-item {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      color: #CBB1A2;
+      transition: color 0.5 ease-in-out;
+      position: relative;
+      &:before {
+        content: "";
+        width: 0;
+        height: 4px;
+        background-color: #6749A5;
+        transition: width 0.5s ease-in-out;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:not(:first-child) {
+        margin-left: 44px;
+      }
+      &:hover {
+        color: #6749A5;
+        &:before {
+          width: 24px;
+        }
+      }
+      &.active {
+        color: #6749A5;
+        &:before {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 920px) { 
+  .coursesStatusBar {
+    justify-content: flex-start;
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 768px) { 
+  .coursesStatusBar {
+    padding: 0 21px 60px 21px;
+  }
+}

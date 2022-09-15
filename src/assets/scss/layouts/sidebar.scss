@@ -1,0 +1,24 @@
+.sidebar {
+  width: $sidBarWidth;
+  background-color: $backgroundColor1;
+  height: 100vh;
+  padding-top: calc(#{$headerHeight} + #{$headerOffset});
+}
+
+@media only screen and (max-width: 1280px) { 
+  .sidebar {
+    width: $sidBarWidth-desktop;
+  }
+}
+
+@media only screen and (max-width: 768px) { 
+  .sidebar {
+    width: $sidBarWidth-tab;
+  }
+}
+
+@media only screen and (max-width: 480px) { 
+  .sidebar {
+    width: $sidBarWidth-mobile;
+  }
+}
